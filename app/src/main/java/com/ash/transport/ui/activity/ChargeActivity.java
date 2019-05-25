@@ -29,12 +29,14 @@ import java.util.Date;
  *----------------------------------------------*/
 public class ChargeActivity extends BaseActivity implements View.OnClickListener {
     private int carId;
+
     private TextView tvCarId;
     private TextView btnMoney20;
     private TextView btnMoney50;
     private TextView btnMoney100;
     private TextView btnCustom;
     private RecordDao recordDao;
+
 
     // 重写父类抽象方法 设置布局ID
     @Override

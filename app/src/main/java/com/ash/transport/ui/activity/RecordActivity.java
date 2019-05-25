@@ -26,7 +26,9 @@ public class RecordActivity extends BaseActivity implements View.OnClickListener
     private ListView lvRecords;         // 记录 列表视图
     private TextView tvTrip;            // 提示 文本框
     private RecordDao recordDao;        // record表访问器
+
     private List<RecordInfo> records;   // 充值记录类 集合数组
+
 
     // 重写父类抽象方法 设置布局ID
     @Override
