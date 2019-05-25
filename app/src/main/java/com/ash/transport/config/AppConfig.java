@@ -80,7 +80,7 @@ public class AppConfig {
     //  json 键 传感器信息 温度
     public static final String KEY_SENSOR_TEMP = "temperature";
     //  json 键 传感器信息 湿度
-    public static final String KEY_SENSOR_HUMI = "humidity";
+    public static final String KEY_SENSOR_HUM = "humidity";
 
     //  json 键 公交车 id
     public static final String KEY_BUS_ID = "BusId";

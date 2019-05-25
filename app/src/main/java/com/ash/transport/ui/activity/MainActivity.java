@@ -16,6 +16,7 @@ import android.widget.TextView;
 
 import com.ash.transport.R;
 import com.ash.transport.ui.fragment.CarFragment;
+import com.ash.transport.ui.fragment.EnvFragment;
 
 /*----------------------------------------------*
  * @package:   com.ash.transport.ui.activity
@@ -33,6 +34,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
     private NavigationView navigationView;  //
     private TextView tvName;
     private TextView tvContact;
+
 
     // 重写父类抽象方法 设置布局ID
     @Override
@@ -126,6 +128,8 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 
             // 出行环境
             case R.id.nav_env:
+                gotoFragment(R.id.content_main, new EnvFragment());
+                MainActivity.this.setTitle(R.string.menu_env);
                 break;
 
             // 道路状态

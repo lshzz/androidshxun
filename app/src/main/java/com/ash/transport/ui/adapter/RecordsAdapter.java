@@ -26,10 +26,12 @@ import java.util.List;
 public class RecordsAdapter extends BaseAdapter {
     private Context context;            // 上下文类
     private List<RecordInfo> records;   // 充值记录数据数组
+
     private TextView tvUserName;        // 充值者 文本框
     private TextView tvCarId;           // 车辆编号 文本框
     private TextView tvMoney;           // 充值金额 文本框
     private TextView tvDate;            // 充值时间 文本框
+
 
     // 定义构造函数 传入 上下文 和 list存放记录数组
     public RecordsAdapter(Context context, List<RecordInfo> records) {
