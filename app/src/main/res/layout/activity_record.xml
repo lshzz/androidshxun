@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="30dp"
+    tools:context=".ui.activity.RecordActivity">
+
+    <TextView
+        android:id="@+id/iv_car_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="本机充值历史记录："
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        />
+
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:background="@color/colorPrimary"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="充值者"
+            android:textSize="18dp"
+            android:textAlignment="center"
+            android:textColor="#ffffff"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="车辆编号"
+            android:textSize="18dp"
+            android:textAlignment="center"
+            android:textColor="#ffffff"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="充值金额"
+            android:textSize="18dp"
+            android:textAlignment="center"
+            android:textColor="#ffffff"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="充值时间"
+            android:textSize="18dp"
+            android:textAlignment="center"
+            android:textColor="#ffffff"/>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_no_records"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="暂无充值记录"
+        android:textSize="25dp"/>
+
+    <ListView
+        android:id="@+id/lv_records"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </ListView>
+
+
+
+    
+</LinearLayout>

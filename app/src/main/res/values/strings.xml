@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">智能交通</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">杨先生</string>
+    <string name="nav_header_subtitle">276364092@qq.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="action_logout">登出账户</string>
+    <string name="action_exit">退出程序</string>
+
+    <string name="menu_car">我的车辆</string>
+    <string name="menu_env">出行环境</string>
+    <string name="menu_bus">城市公交</string>
+    <string name="menu_road">道路状态</string>
+    <string name="menu_settings">设置</string>
+    <string name="menu_help">联系客服</string>
+</resources>

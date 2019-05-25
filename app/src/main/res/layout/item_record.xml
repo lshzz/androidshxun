@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@color/colorPrimaryDark">
+
+    <TextView
+        android:id="@+id/item_username"
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="充值者"
+        android:textColor="#eeeeee"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/item_car_id"
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="车辆编号"
+        android:textColor="#eeeeee"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/item_money"
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="￥ 200.00"
+        android:textColor="#eeeeee"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/item_date"
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="充值时间"
+        android:textColor="#eeeeee"
+        android:gravity="center"/>
+
+</LinearLayout>

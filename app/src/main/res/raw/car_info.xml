@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<info>
+    <carId id="1">
+        <make>宝马 X5</make>
+        <engine>B58B30</engine>
+        <frame>SUV</frame>
+        <type>中型汽车</type>
+        <licenseType>蓝牌</licenseType>
+        <licenseNum>桂B34615</licenseNum>
+        <VioNum>3</VioNum>
+        <points>4</points>
+        <fine>550</fine>
+    </carId>
+    <carId id="2">
+        <make>AMG GT</make>
+        <engine>178980</engine>
+        <frame>LC0</frame>
+        <type>掀背跑车</type>
+        <licenseType>蓝牌</licenseType>
+        <licenseNum>桂A68135</licenseNum>
+        <VioNum>7</VioNum>
+        <points>7</points>
+        <fine>900</fine>
+    </carId>
+    <carId id="3">
+        <make>宝骏 310</make>
+        <engine>ST1354</engine>
+        <frame>CG7</frame>
+        <type>小型汽车</type>
+        <licenseType>蓝牌</licenseType>
+        <licenseNum>桂C75681</licenseNum>
+        <VioNum>0</VioNum>
+        <points>0</points>
+        <fine>0</fine>
+    </carId>
+    <carId id="4">
+        <make>丰田 卡罗拉</make>
+        <engine>9NRFTS</engine>
+        <frame>HU1</frame>
+        <type>三厢汽车</type>
+        <licenseType>蓝牌</licenseType>
+        <licenseNum>桂D94110</licenseNum>
+        <VioNum>0</VioNum>
+        <points>0</points>
+        <fine>200</fine>
+    </carId>
+</info>
