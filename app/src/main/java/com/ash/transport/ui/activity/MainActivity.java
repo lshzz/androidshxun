@@ -17,6 +17,7 @@ import android.widget.TextView;
 import com.ash.transport.R;
 import com.ash.transport.ui.fragment.CarFragment;
 import com.ash.transport.ui.fragment.EnvFragment;
+import com.ash.transport.ui.fragment.RoadFragment;
 
 /*----------------------------------------------*
  * @package:   com.ash.transport.ui.activity
@@ -73,17 +74,21 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
         toggle.syncState();
         navigationView.setNavigationItemSelectedListener(this);
 
-
-
+        // 进入MainActivity后跳转我的车辆页面
+        gotoFragment(R.id.content_main, new CarFragment());
+        MainActivity.this.setTitle(R.string.menu_car);
     }
 
     // 重写超类抽象方法 按下返回键事件
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
+        // 如果侧滑菜单打开
         if (drawer.isDrawerOpen(GravityCompat.START)) {
+            // 则关闭菜单
             drawer.closeDrawer(GravityCompat.START);
         } else {
+            // 否则退出程序
             super.onBackPressed();
         }
     }
@@ -134,6 +139,8 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 
             // 道路状态
             case R.id.nav_road:
+                gotoFragment(R.id.content_main, new RoadFragment());
+                MainActivity.this.setTitle(R.string.menu_road);
                 break;
 
             // 城市公交
