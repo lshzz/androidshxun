@@ -6,8 +6,10 @@ import android.os.Handler;
 import android.os.Message;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.Switch;
 import android.widget.TextView;
 
 import com.ash.transport.R;
@@ -16,6 +18,7 @@ import com.ash.transport.factory.ToastFactory;
 import com.ash.transport.model.CarInfo;
 import com.ash.transport.request.BaseRequest;
 import com.ash.transport.request.GetBalanceRequest;
+import com.ash.transport.request.SetCarActionRequest;
 import com.ash.transport.service.CarInfoService;
 import com.ash.transport.ui.activity.ChargeActivity;
 import com.ash.transport.ui.activity.RecordActivity;
@@ -55,7 +58,7 @@ public class CarFragment extends BaseFragment implements View.OnClickListener {
     private TextView tvFine;            // 声明 总罚款 文本框
     private Button btnCharge;           // 声明 余额充值 按钮
     private TextView btnRecords;        // 声明 查询充值记录 按钮
-    private TextView btnChangeInfo;     // 声明 更改车辆信息 按钮
+    private Switch swiCarAction;        // 声明 车辆启停 开关
 
 
     // 重写父类抽象方法 设置布局ID
@@ -81,7 +84,7 @@ public class CarFragment extends BaseFragment implements View.OnClickListener {
         tvFine = mView.findViewById(R.id.tv_fine);
         btnCharge = mView.findViewById(R.id.btn_charge);
         btnRecords = mView.findViewById(R.id.btn_records);
-        btnChangeInfo = mView.findViewById(R.id.btn_change_info);
+        swiCarAction = mView.findViewById(R.id.swi_car_action);
     }
 
     // 重写父类抽象方法 初始化数据
@@ -92,7 +95,17 @@ public class CarFragment extends BaseFragment implements View.OnClickListener {
         // 使用本类中实现的按钮监听事件
         btnCharge.setOnClickListener(this);
         btnRecords.setOnClickListener(this);
-        btnChangeInfo.setOnClickListener(this);
+
+        // 为车辆启停开关设置事件
+        swiCarAction.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                // 根据开关状态判断启动或停止
+                String action = isChecked ? "Move" : "Stop";
+                // 设置车辆启停
+                setCarAction(carId, action);
+            }
+        });
 
         handler = new Handler() {
             // 当 handle 收到消息后 会在子线程中处理以下消息
@@ -156,7 +169,7 @@ public class CarFragment extends BaseFragment implements View.OnClickListener {
                 Intent intent = new Intent(mContext, ChargeActivity.class);
 
                 // Android 规范是以 包名+类名+变量名 来命名意图传值键名
-                intent.putExtra("com.ash.transport.ui.fragment.CarFragment.carId",carId);
+                intent.putExtra("com.ash.transport.ui.fragment.CarFragment.carId", carId);
 
                 startActivity(intent);
                 break;
@@ -164,10 +177,6 @@ public class CarFragment extends BaseFragment implements View.OnClickListener {
             // 历史记录
             case R.id.btn_records:
                 startActivity(new Intent(mContext, RecordActivity.class));
-                break;
-
-            // 更改信息
-            case R.id.btn_change_info:
                 break;
         }
     }
@@ -222,6 +231,30 @@ public class CarFragment extends BaseFragment implements View.OnClickListener {
             public void onReturn(Object data) {
                 // 显示余额
                 tvMoney.setText("￥" + data + ".00");
+            }
+        });
+    }
+
+    // 定义 设置车辆启停 方法
+    private void setCarAction(int carId, String action) {
+        // 使用设置车辆启停请求类
+        SetCarActionRequest setCarActionRequest = new SetCarActionRequest(mContext);
+        // 设置车辆ID
+        setCarActionRequest.setCarId(carId);
+        // 设置车辆动作
+        setCarActionRequest.setAction(action);
+        // 连接服务器
+        setCarActionRequest.connec(new BaseRequest.OnGetDataListener() {
+            // 返回结果监听器 触发事件
+            @Override
+            public void onReturn(Object data) {
+                if (data != null) {
+                    ToastFactory.show(mContext, "操作成功！");
+                } else {
+                    ToastFactory.show(mContext, "操作失败！");
+                    swiCarAction.setChecked(!swiCarAction.isChecked());
+                }
+
             }
         });
     }
