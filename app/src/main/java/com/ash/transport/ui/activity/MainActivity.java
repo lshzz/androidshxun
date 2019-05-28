@@ -2,6 +2,7 @@ package com.ash.transport.ui.activity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.GravityCompat;
@@ -14,6 +15,8 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.ash.transport.R;
+import com.ash.transport.factory.ToastFactory;
+import com.ash.transport.ui.fragment.AboutFragment;
 import com.ash.transport.ui.fragment.BusFragment;
 import com.ash.transport.ui.fragment.CarFragment;
 import com.ash.transport.ui.fragment.EnvFragment;
@@ -35,6 +38,7 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
     private NavigationView navigationView;  //
     private TextView tvName;
     private TextView tvContact;
+    private long exitTime = 0;
 
 
     // 重写父类抽象方法 设置布局ID
@@ -88,8 +92,18 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
             // 则关闭菜单
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            // 否则退出程序
-            super.onBackPressed();
+
+            // 按两次返回键退出
+            if ((System.currentTimeMillis() - exitTime) > 2000) {
+                // 第一次 弹出提示
+                ToastFactory.show(MainActivity.this,"再按一次退出程序");
+                exitTime = System.currentTimeMillis();
+            } else {
+                // 第二次 退出程序
+                super.onBackPressed();
+                finish();
+            }
+
         }
     }
 
@@ -149,12 +163,19 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
                 MainActivity.this.setTitle(R.string.menu_bus);
                 break;
 
-            // 设置
-            case R.id.nav_settings:
+            // 关于
+            case R.id.nav_about:
+                gotoFragment(R.id.content_main, new AboutFragment());
+                MainActivity.this.setTitle(R.string.menu_about);
                 break;
 
             // 联系客服
             case R.id.nav_help:
+                // 跳转到拨号界面
+                // 需添加电话拨号权限 android.permission.CALL_PHONE
+                Uri uri = Uri.parse("tel:10086");
+                Intent intent = new Intent(Intent.ACTION_DIAL, uri);
+                startActivity(intent);
                 break;
         }
 

@@ -20,6 +20,7 @@ import android.view.ViewGroup;
  * @date:      on 2019-05-21 17:18
  * @继承关系:   BaseFragment ← [Fragment]
  *----------------------------------------------*/
+
 public abstract class BaseFragment extends Fragment {
     protected Context mContext;
     protected View mView;
