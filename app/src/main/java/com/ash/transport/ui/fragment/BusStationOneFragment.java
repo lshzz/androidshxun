@@ -10,8 +10,8 @@ import java.util.List;
 
 /*----------------------------------------------*
  * @package:   com.ash.transport.ui.fragment
- * @fileName:  BusFragment.java
- * @describe:  城市公交一号站台页面碎片类
+ * @fileName:  BusStationOneFragment.java
+ * @describe:  城市公交一号站台 页面碎片类
  *----------------------------------------------*
  * @author:    ash
  * @email:     Glaxyinfinite@outlook.com
