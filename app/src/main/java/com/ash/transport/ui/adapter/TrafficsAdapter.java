@@ -2,7 +2,6 @@ package com.ash.transport.ui.adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,7 +9,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.ash.transport.R;
-import com.ash.transport.bean.TrafficInfo;
+import com.ash.transport.model.TrafficInfo;
 
 import java.util.List;
 

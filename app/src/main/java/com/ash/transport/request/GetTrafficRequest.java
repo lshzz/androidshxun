@@ -1,10 +1,9 @@
 package com.ash.transport.request;
 
 import android.content.Context;
-import android.util.Log;
 
-import com.ash.transport.bean.TrafficInfo;
 import com.ash.transport.config.AppConfig;
+import com.ash.transport.model.TrafficInfo;
 
 import org.json.JSONException;
 import org.json.JSONObject;

@@ -13,7 +13,7 @@ import android.widget.Switch;
 import android.widget.TextView;
 
 import com.ash.transport.R;
-import com.ash.transport.bean.EnvInfo;
+import com.ash.transport.model.EnvInfo;
 import com.ash.transport.request.BaseRequest;
 import com.ash.transport.request.GetEnvRequest;
 

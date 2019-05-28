@@ -7,10 +7,10 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.ash.transport.R;
-import com.ash.transport.bean.RecordInfo;
 import com.ash.transport.dao.RecordDao;
 import com.ash.transport.factory.DialogFactory;
 import com.ash.transport.factory.ToastFactory;
+import com.ash.transport.model.RecordInfo;
 import com.ash.transport.request.BaseRequest;
 import com.ash.transport.request.SetBalanceRequest;
 
