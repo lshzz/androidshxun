@@ -8,13 +8,13 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
 import com.ash.transport.R;
+import com.ash.transport.ui.fragment.BusFragment;
 import com.ash.transport.ui.fragment.CarFragment;
 import com.ash.transport.ui.fragment.EnvFragment;
 import com.ash.transport.ui.fragment.RoadFragment;
@@ -145,6 +145,8 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
 
             // 城市公交
             case R.id.nav_bus:
+                gotoFragment(R.id.content_main, new BusFragment());
+                MainActivity.this.setTitle(R.string.menu_bus);
                 break;
 
             // 设置

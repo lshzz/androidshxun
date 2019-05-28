@@ -2,7 +2,7 @@ package com.ash.transport.dao;
 
 import android.content.Context;
 
-import com.ash.transport.bean.RecordInfo;
+import com.ash.transport.model.RecordInfo;
 import com.j256.ormlite.dao.Dao;
 
 import java.sql.SQLException;

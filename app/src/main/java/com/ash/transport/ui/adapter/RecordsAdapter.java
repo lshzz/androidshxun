@@ -9,7 +9,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.ash.transport.R;
-import com.ash.transport.bean.RecordInfo;
+import com.ash.transport.model.RecordInfo;
 
 import java.util.List;
 

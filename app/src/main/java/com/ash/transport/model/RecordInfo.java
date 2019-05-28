@@ -1,4 +1,4 @@
-package com.ash.transport.bean;
+package com.ash.transport.model;
 
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;

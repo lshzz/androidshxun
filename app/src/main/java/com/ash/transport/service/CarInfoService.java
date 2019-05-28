@@ -2,7 +2,7 @@ package com.ash.transport.service;
 
 import android.util.Xml;
 
-import com.ash.transport.bean.CarInfo;
+import com.ash.transport.model.CarInfo;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;

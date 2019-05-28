@@ -6,8 +6,8 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.ash.transport.R;
-import com.ash.transport.bean.RecordInfo;
 import com.ash.transport.dao.RecordDao;
+import com.ash.transport.model.RecordInfo;
 import com.ash.transport.ui.adapter.RecordsAdapter;
 
 import java.util.List;

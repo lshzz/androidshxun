@@ -2,8 +2,8 @@ package com.ash.transport.request;
 
 import android.content.Context;
 
-import com.ash.transport.bean.EnvInfo;
 import com.ash.transport.config.AppConfig;
+import com.ash.transport.model.EnvInfo;
 
 import org.json.JSONException;
 import org.json.JSONObject;
