@@ -1,4 +1,4 @@
-package com.ash.transport.bean;
+package com.ash.transport.model;
 
 /*----------------------------------------------*
  * @package:   com.ash.transport.bean

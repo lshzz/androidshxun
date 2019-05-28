@@ -4,7 +4,6 @@ import android.annotation.SuppressLint;
 import android.graphics.Color;
 import android.os.Handler;
 import android.os.Message;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
@@ -12,8 +11,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.ash.transport.R;
-import com.ash.transport.bean.TrafficInfo;
 import com.ash.transport.factory.SpinnerFactory;
+import com.ash.transport.model.TrafficInfo;
 import com.ash.transport.request.BaseRequest;
 import com.ash.transport.request.GetRoadStatusRequest;
 import com.ash.transport.request.GetTrafficRequest;

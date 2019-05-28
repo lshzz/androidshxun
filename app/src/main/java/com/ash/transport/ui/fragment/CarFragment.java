@@ -11,9 +11,9 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.ash.transport.R;
-import com.ash.transport.bean.CarInfo;
 import com.ash.transport.factory.SpinnerFactory;
 import com.ash.transport.factory.ToastFactory;
+import com.ash.transport.model.CarInfo;
 import com.ash.transport.request.BaseRequest;
 import com.ash.transport.request.GetBalanceRequest;
 import com.ash.transport.service.CarInfoService;
