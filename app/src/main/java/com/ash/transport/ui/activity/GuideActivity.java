@@ -3,6 +3,9 @@ package com.ash.transport.ui.activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.CountDownTimer;
+import android.view.Window;
+import android.view.WindowManager;
+
 
 import com.ash.transport.R;
 
@@ -27,6 +30,9 @@ public class GuideActivity extends BaseActivity {
     // 重写父类抽象方法 初始化视图
     @Override
     protected void initView() {
+        // Activity 全屏显示
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
     }
 
@@ -34,13 +40,16 @@ public class GuideActivity extends BaseActivity {
     @Override
     protected void initData() {
 
-        // 启动定时器 时间为2秒
+        // 启动倒时器 总持续时间为2秒 每次减去1秒
         new CountDownTimer(2000, 1000) {
+
+            // 每完成一次倒时后触发的事件
             @Override
             public void onTick(long millisUntilFinished) {
 
             }
 
+            // 完成全部倒时后触发的事件
             @Override
             public void onFinish() {
 

@@ -37,12 +37,4 @@
         android:text="项目代码托管于 GitHub.com"
         android:textColor="@color/colorPrimary"/>
 
-    <TextView
-        android:paddingTop="50dp"
-        android:paddingLeft="50dp"
-        android:paddingRight="50dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/license"/>
-
 </LinearLayout>
