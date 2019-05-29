@@ -31,14 +31,14 @@ import java.util.Date;
  * @继承关系:   ChargeActivity ← BaseActivity ← [AppCompatActivity]
  *----------------------------------------------*/
 public class ChargeActivity extends BaseActivity implements View.OnClickListener {
-    private int carId;
+    private int carId;              // 欲充值的车辆编号
 
-    private TextView tvCarId;
-    private TextView btnMoney20;
-    private TextView btnMoney50;
-    private TextView btnMoney100;
-    private TextView btnCustom;
-    private RecordDao recordDao;
+    private TextView tvCarId;       // 车辆编号 文本框
+    private TextView btnMoney20;    // 充值金额20元 按钮
+    private TextView btnMoney50;    // 充值金额50元 按钮
+    private TextView btnMoney100;   // 充值金额100元 按钮
+    private TextView btnCustom;     // 自定义充值金额 按钮
+    private RecordDao recordDao;    // 充值记录 数据库访问器
 
 
     // 重写父类抽象方法 设置布局ID
@@ -122,9 +122,12 @@ public class ChargeActivity extends BaseActivity implements View.OnClickListener
                     @Override
                     public void onAfter(String input) {
 
+                        // 如果输入金额问3位数以内
                         if (RegUtil.isInteger3(input)) {
+                            // 调用充值金额方法
                             charge(Integer.valueOf(input));
                         } else {
+                            // 使用Toast工厂类显示消息框
                             ToastFactory.show(ChargeActivity.this, "单次充值金额不能超过999元");
                         }
 
@@ -161,17 +164,26 @@ public class ChargeActivity extends BaseActivity implements View.OnClickListener
             public void onReturn(Object data) {
                 if ("ok".equals(data.toString())) {
 
+                    // 初始化充值记录信息类
                     RecordInfo record = new RecordInfo();
+                    // 记录充值车辆
                     record.setCarId(carId);
+                    // 记录充值金额
                     record.setMoney(money);
 
+                    // 使用shared获得充值者并记录
                     SharedPreferences shared = getSharedPreferences("userInfo", MODE_PRIVATE);
                     record.setUserName(shared.getString("name", "name"));
 
+                    // 获取当前时间
                     Date currentTime = new Date();
+                    // 设置时间格式
                     SimpleDateFormat formatter = new SimpleDateFormat("MM-dd hh:mm");
+                    // 记录充值时间
                     record.setChargeDate(formatter.format(currentTime));
 
+                    // 使用充值记录数据库访问器
+                    // 增加一条充值记录数据到数据库表
                     recordDao.insert(record);
 
                     ToastFactory.show(ChargeActivity.this, "充值成功", true);
