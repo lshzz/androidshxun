@@ -39,13 +39,15 @@ public class RecordActivity extends BaseActivity implements View.OnClickListener
     // 重写父类抽象方法 初始化视图
     @Override
     protected void initView() {
+        // 设置顶部原生标题栏标题 已在清单文件中设置
+        // RecordActivity.this.setTitle("充值记录");
+
+        // 显示顶部原生标题栏返回按钮
         android.support.v7.app.ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setHomeButtonEnabled(true);
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
-
-        RecordActivity.this.setTitle("充值历史");
 
         lvRecords = findViewById(R.id.lv_records);
         tvTrip = findViewById(R.id.tv_no_records);

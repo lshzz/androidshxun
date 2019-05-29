@@ -36,25 +36,76 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_car.xml">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/config/AppConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5440">
-              <caret line="320" selection-start-line="320" selection-end-line="320" />
+            <state relative-caret-position="111">
+              <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
             </state>
           </provider>
-          <provider editor-type-id="android-designer2" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/fragment/CarFragment.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/dao/DatabaseHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="397">
-              <caret line="258" column="11" selection-start-line="258" selection-start-column="11" selection-end-line="258" selection-end-column="11" />
+            <state relative-caret-position="236">
+              <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+          <provider editor-type-id="android-manifest" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="49" column="31" selection-start-line="49" selection-start-column="31" selection-end-line="49" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/activity/LoginActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="193">
+              <caret line="42" selection-start-line="42" selection-end-line="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/activity/ChargeActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="318">
+              <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#3781#4199#0" expanded="true" />
+                <element signature="e#4198#4199#0" expanded="true" />
+                <element signature="e#4492#4678#0" expanded="true" />
+                <element signature="e#4677#4678#0" expanded="true" />
+                <element signature="e#4977#5981#0" expanded="true" />
+                <element signature="e#5980#5981#0" expanded="true" />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/activity/RecordActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="42" column="45" selection-start-line="42" selection-start-column="45" selection-end-line="42" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/activity_main_drawer.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="202">
+              <caret line="32" column="44" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="44" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -67,46 +118,24 @@
           <provider editor-type-id="android-designer2" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/activity/GuideActivity.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="254">
+              <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
             </state>
           </provider>
+          <provider editor-type-id="android-designer2" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/request/SetCarActionRequest.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/nav_header_main.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="44" selection-start-line="44" selection-end-line="44" />
+            <state relative-caret-position="145">
+              <caret line="19" column="63" selection-start-line="19" selection-start-column="63" selection-end-line="19" selection-end-column="63" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/config/AppConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="986">
-              <caret line="58" selection-start-line="58" selection-end-line="58" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/fragment/EnvFragment.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="40" selection-start-line="40" selection-end-line="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
+          <provider editor-type-id="android-designer2" />
         </entry>
       </file>
     </leaf>
@@ -129,57 +158,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/dao/RecordDao.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_charge.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/bean/RecordInfo.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/dao/DatabaseHelper.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/item_record.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_record.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/activity/WelcomeActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/nav_header_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/activity/LoginActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_guide.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/request/getEnvRequest.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/config/AppConfig.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/request/GetEnvRequest.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/bean/EnvInfo.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/activity/RecordActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/adapter/RecordsAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/activity/ChargeActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_env.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/fragment/EnvFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/bean/TrafficInfo.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_road.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/item_traffic.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/request/GetTrafficRequest.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/adapter/TrafficsAdapter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/fragment/RoadFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/fragment/BusPageOneFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_bus_station_1.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_bus.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_bus_station_2.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/adapter/ViewPagerAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/request/GetRoadStatusRequest.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/request/GetBusStationRequest.java" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/activity/AboutActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/fragment/BusFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/fragment/BusStationOneFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/fragment/BusStationTwoFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/fragment/BaseFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/fragment/AboutFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/activity/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/menu/main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/menu/activity_main_drawer.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_car.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/request/GetCarActionRequest.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/request/SetCarActionRequest.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/fragment/CarFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_about.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/activity/GuideActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/utils/NetUtil.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_bus_station_1.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_bus_station_2.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_car.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/activity/BaseActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/fragment/BaseFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/request/BaseRequest.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/fragment/BusFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/fragment/CarFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/config/AppConfig.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/utils/Session.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/widget/EditDialog.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/utils/RegUtil.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/factory/DialogFactory.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/activity/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/utils/PermissionUtil.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_env.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/fragment/BusStationOneFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/fragment/BusStationTwoFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/fragment/EnvFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/adapter/TrafficsAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/fragment/RoadFragment.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_road.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/nav_header_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/menu/activity_main_drawer.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/activity/RecordActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/activity/ChargeActivity.java" />
       </list>
     </option>
   </component>
@@ -209,6 +238,11 @@
             <path>
               <item name="transport" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="manifests" type="f94875db:AndroidManifestsGroupNode" />
+            </path>
+            <path>
+              <item name="transport" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
             </path>
             <path>
@@ -216,6 +250,41 @@
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="transport" type="cbb59c9e:AndroidPsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="transport" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="transport" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="transport" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="transport" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="transport" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="transport" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="factory" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="transport" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="transport" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="transport" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="transport" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="request" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="transport" type="1abcf292:AndroidViewProjectNode" />
@@ -235,13 +304,56 @@
             <path>
               <item name="transport" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="transport" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="adapter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="transport" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="transport" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="fragment" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="transport" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="transport" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="widget" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="transport" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="transport" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="transport" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="res" type="d4f16f75:AndroidResFolderNode" />
             </path>
             <path>
               <item name="transport" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="drawable" type="ddeffd01:AndroidResFolderTypeNode" />
+            </path>
+            <path>
+              <item name="transport" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
               <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
+            </path>
+            <path>
+              <item name="transport" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="menu" type="ddeffd01:AndroidResFolderTypeNode" />
             </path>
           </expand>
           <select />
@@ -314,6 +426,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
       <recent name="$PROJECT_DIR$/app/src/main/res/drawable-v24" />
       <recent name="$PROJECT_DIR$/app/src/main/java/com/ash/transport/utils" />
     </key>
@@ -443,11 +556,11 @@
       <window_info id="Resources Explorer" order="7" />
       <window_info id="Capture Tool" order="8" />
       <window_info anchor="bottom" id="Run" order="0" weight="0.3287858" />
-      <window_info anchor="bottom" id="Logcat" order="1" sideWeight="0.49843994" weight="0.3287858" />
+      <window_info anchor="bottom" id="Logcat" order="1" sideWeight="0.49687988" visible="true" weight="0.3287858" />
       <window_info anchor="bottom" id="TODO" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" />
       <window_info anchor="bottom" id="Terminal" order="4" />
-      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.5015601" side_tool="true" weight="0.3287858" />
+      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.5031201" side_tool="true" weight="0.3287858" />
       <window_info anchor="bottom" id="Version Control" order="6" />
       <window_info anchor="bottom" id="Build" order="7" weight="0.23738062" />
       <window_info anchor="bottom" id="Android Profiler" order="8" weight="0.3287858" />
@@ -467,165 +580,6 @@
     </ignored-roots>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../../kit/android/sdk/sources/android-28/java/lang/Thread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="454" column="11" selection-start-line="454" selection-start-column="11" selection-end-line="454" selection-end-column="11" />
-          <folding>
-            <element signature="e#15876#15877#0" expanded="true" />
-            <element signature="e#15942#15943#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/model/CarInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="5" column="15" lean-forward="true" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="22" />
-          <folding>
-            <element signature="e#692#693#0" expanded="true" />
-            <element signature="e#720#721#0" expanded="true" />
-            <element signature="e#762#763#0" expanded="true" />
-            <element signature="e#796#797#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/model/EnvInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/activity/RecordActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="724">
-          <caret line="49" column="50" selection-start-line="49" selection-start-column="50" selection-end-line="49" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_env.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="android-dummy:///Users/ash/development/workspace/android/transport/app/Translations Editor">
-      <provider selected="true" editor-type-id="string-resource-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/activity/ChargeActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/model/RecordInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="674">
-          <caret line="79" column="30" selection-start-line="79" selection-start-column="30" selection-end-line="79" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/model/TrafficInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
-          <folding>
-            <element signature="e#561#562#0" expanded="true" />
-            <element signature="e#602#603#0" expanded="true" />
-            <element signature="e#638#639#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_traffic.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/dao/DatabaseHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="38" column="24" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/request/GetTrafficRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="66" column="38" selection-start-line="66" selection-start-column="38" selection-end-line="66" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_road.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="174" selection-start-line="174" selection-end-line="174" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/adapter/TrafficsAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="3" lean-forward="true" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/utils/FragmentUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="7" selection-start-line="7" selection-start-column="6" selection-end-line="12" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/adapter/RecordsAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/colors.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_bus_station_2.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_bus.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -634,95 +588,71 @@
       </provider>
       <provider editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/adapter/ViewPagerAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1077#1078#0" expanded="true" />
-            <element signature="e#1123#1124#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_bus_station_1.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="343">
+          <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
         </state>
       </provider>
       <provider editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/request/GetRoadStatusRequest.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_record.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
+        <state relative-caret-position="255">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../kit/android/sdk/sources/android-28/android/app/Activity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4120">
+          <caret line="1032" column="9" lean-forward="true" selection-start-line="1032" selection-start-column="9" selection-end-line="1032" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a94b2e698696147946761b00288bab21/jars/classes.jar!/android/support/v4/app/SupportActivity.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="166">
+          <caret line="38" column="20" selection-start-line="38" selection-start-column="20" selection-end-line="38" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7bb67c8a2b2650e0a4b867d55b42a8d4/jars/classes.jar!/android/support/v4/app/FragmentActivity.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="176" column="19" lean-forward="true" selection-start-line="176" selection-start-column="19" selection-end-line="176" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/d368aedfb81268444315926229afa69e/jars/classes.jar!/android/support/v7/app/AppCompatActivity.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="58" column="17" selection-start-line="58" selection-start-column="17" selection-end-line="58" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/activity/BaseActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/request/BaseRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="52" column="58" selection-start-line="52" selection-start-column="58" selection-end-line="52" selection-end-column="58" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/request/GetEnvRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/utils/NetUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1120">
-          <caret line="111" selection-start-line="111" selection-end-line="111" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/request/GetBalanceRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="63" column="35" selection-start-line="63" selection-start-column="35" selection-end-line="63" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-v21/ic_menu_manage.xml">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/request/GetBusStationRequest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="e#444#462#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/activity/AboutActivity.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/activity/LoginActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="610">
-          <caret line="63" column="31" selection-start-line="63" selection-start-column="31" selection-end-line="63" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="851">
+          <caret line="64" selection-start-line="64" selection-end-line="64" />
         </state>
       </provider>
     </entry>
@@ -733,10 +663,148 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/request/BaseRequest.java">
+    <entry file="file://$PROJECT_DIR$/../../../kit/android/sdk/sources/android-28/android/content/Context.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="689">
-          <caret line="56" selection-start-line="56" selection-end-line="56" />
+        <state relative-caret-position="214">
+          <caret line="126" column="7" lean-forward="true" selection-start-line="126" selection-start-column="7" selection-end-line="126" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../kit/android/sdk/sources/android-28/androidx/appcompat/app/AlertController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="166" column="64" selection-start-line="166" selection-start-column="64" selection-end-line="166" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/utils/NetUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2191">
+          <caret line="41" column="20" selection-start-line="41" selection-start-column="13" selection-end-line="41" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/widget/EditDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="263">
+          <caret line="16" column="63" selection-start-line="16" selection-start-column="63" selection-end-line="16" selection-end-column="63" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#486#1211#0" expanded="true" />
+            <element signature="e#1210#1211#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/activity/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="148" column="37" selection-start-line="148" selection-start-column="37" selection-end-line="148" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/utils/Session.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/utils/RegUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+          <folding>
+            <element signature="e#616#617#0" expanded="true" />
+            <element signature="e#648#649#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../kit/android/sdk/sources/android-28/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="112" column="19" selection-start-line="112" selection-start-column="19" selection-end-line="112" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/factory/DialogFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="95" column="57" selection-start-line="95" selection-start-column="57" selection-end-line="95" selection-end-column="57" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1111#1320#0" expanded="true" />
+            <element signature="e#1319#1320#0" expanded="true" />
+            <element signature="e#2435#2612#0" expanded="true" />
+            <element signature="e#2611#2612#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/model/EnvInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/fragment/BaseFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-11">
+          <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/utils/PermissionUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/fragment/BusFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="63" column="24" selection-start-line="63" selection-start-column="24" selection-end-line="63" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_bus_station_2.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_env.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="31" selection-start-line="31" selection-end-line="31" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/fragment/BusStationTwoFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-198">
+          <caret line="46" column="17" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -745,147 +813,113 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/fragment/BusStationOneFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+        <state relative-caret-position="374">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/fragment/BusStationTwoFragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/request/GetTrafficRequest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+        <state relative-caret-position="-239">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/adapter/RecordsAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="719">
+          <caret line="64" column="24" selection-start-line="64" selection-start-column="24" selection-end-line="64" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_traffic.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/adapter/TrafficsAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="831">
+          <caret line="74" column="52" selection-start-line="74" selection-start-column="52" selection-end-line="74" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/fragment/CarFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="150" column="11" selection-start-line="150" selection-start-column="11" selection-end-line="150" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/fragment/EnvFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="214" column="8" selection-start-line="214" selection-start-column="8" selection-end-line="215" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#4001#5678#0" expanded="true" />
+            <element signature="e#5677#5678#0" expanded="true" />
+            <element signature="e#5674#6178#0" expanded="true" />
+            <element signature="e#6177#6178#0" expanded="true" />
+            <element signature="e#5065#5603#0" expanded="true" />
+            <element signature="e#5602#5603#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/fragment/RoadFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2867">
-          <caret line="190" column="11" selection-start-line="190" selection-start-column="11" selection-end-line="190" selection-end-column="11" />
+        <state relative-caret-position="279">
+          <caret line="204" column="18" selection-start-line="204" selection-start-column="18" selection-end-line="204" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5432#5776#0" expanded="true" />
-            <element signature="e#5775#5776#0" expanded="true" />
+            <element signature="e#3669#4017#0" expanded="true" />
+            <element signature="e#4016#4017#0" expanded="true" />
+            <element signature="e#4078#4641#0" expanded="true" />
+            <element signature="e#4640#4641#0" expanded="true" />
+            <element signature="e#5209#5598#0" expanded="true" />
+            <element signature="e#5597#5598#0" expanded="true" />
+            <element signature="e#6923#6924#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/fragment/BusFragment.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_road.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/fragment/BaseFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/activity/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="113" column="43" selection-start-line="113" selection-start-column="43" selection-end-line="113" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#5769#5788#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
+        <state relative-caret-position="171">
+          <caret line="137" selection-start-line="137" selection-end-line="137" />
         </state>
       </provider>
       <provider editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_car.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+        <state relative-caret-position="147">
+          <caret line="287" selection-start-line="287" selection-end-line="287" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/main.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/app_bar_main.xml">
       <provider selected="true" editor-type-id="text-editor" />
       <provider editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/activity_main_drawer.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_main.xml">
+      <provider selected="true" editor-type-id="text-editor" />
       <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/fragment/AboutFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-151">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
-          <folding>
-            <element signature="e#1137#1138#0" expanded="true" />
-            <element signature="e#1173#1174#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/request/GetCarActionRequest.java" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_car.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5440">
-          <caret line="320" selection-start-line="320" selection-end-line="320" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/request/SetCarActionRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="44" selection-start-line="44" selection-end-line="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/config/AppConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="58" selection-start-line="58" selection-end-line="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/fragment/EnvFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="40" selection-start-line="40" selection-end-line="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/fragment/CarFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="258" column="11" selection-start-line="258" selection-start-column="11" selection-end-line="258" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_about.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -895,12 +929,84 @@
       </provider>
       <provider editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/activity/GuideActivity.java">
+    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/bf7f798389a5eea5a7ece7e709cc4d91/jars/classes.jar!/android/support/design/widget/NavigationView.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="57" lean-forward="true" selection-start-line="57" selection-end-line="57" />
+        <state relative-caret-position="102">
+          <caret line="50" column="13" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="22" column="36" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/nav_header_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="19" column="63" selection-start-line="19" selection-start-column="63" selection-end-line="19" selection-end-column="63" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/activity_main_drawer.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="32" column="44" selection-start-line="32" selection-start-column="44" selection-end-line="32" selection-end-column="44" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/config/AppConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/dao/DatabaseHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/activity/LoginActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="49" column="31" selection-start-line="49" selection-start-column="31" selection-end-line="49" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/activity/RecordActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="42" column="45" selection-start-line="42" selection-start-column="45" selection-end-line="42" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/activity/ChargeActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="61" lean-forward="true" selection-start-line="61" selection-end-line="61" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#3781#4199#0" expanded="true" />
+            <element signature="e#4198#4199#0" expanded="true" />
+            <element signature="e#4492#4678#0" expanded="true" />
+            <element signature="e#4677#4678#0" expanded="true" />
+            <element signature="e#4977#5981#0" expanded="true" />
+            <element signature="e#5980#5981#0" expanded="true" />
           </folding>
         </state>
       </provider>

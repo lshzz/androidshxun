@@ -10,6 +10,11 @@ package com.ash.transport.config;
  * @date:      on 2019-05-21 15:37
  *----------------------------------------------*/
 public class AppConfig {
+    // 请求ip地址 相关常量
+    public static final String IP_REMOTE = "remote";
+    public static final String IP_LOCAL = "local";
+    public static final String IP_DEFAULT = "47.106.226.220";
+
     //  请求端口
     public static final int PORT = 8080;
 

@@ -2,20 +2,29 @@ package com.ash.transport.ui.fragment;
 
 
 import android.annotation.SuppressLint;
-import android.app.Notification;
+import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.Context;
+import android.content.Intent;
+import android.graphics.Color;
+import android.net.Uri;
+import android.os.Build;
 import android.os.Handler;
 import android.os.Message;
+import android.provider.Settings;
+import android.support.annotation.RequiresApi;
 import android.support.v4.app.NotificationCompat;
+import android.support.v4.app.NotificationManagerCompat;
 import android.widget.CompoundButton;
 import android.widget.Switch;
 import android.widget.TextView;
 
 import com.ash.transport.R;
+import com.ash.transport.factory.ToastFactory;
 import com.ash.transport.model.EnvInfo;
 import com.ash.transport.request.BaseRequest;
 import com.ash.transport.request.GetEnvRequest;
+import com.ash.transport.utils.NetUtil;
 
 /*----------------------------------------------*
  * @package:   com.ash.transport.ui.fragment
@@ -33,7 +42,6 @@ public class EnvFragment extends BaseFragment implements Switch.OnCheckedChangeL
     private TextView tvCo2;             // co2 文本框
     private TextView tvLight;           // 光照强度 文本框
     private TextView tvHum;             // 湿度 文本框
-    private Switch swRefresh;           // 自动刷新 开关
     private Switch swNotify;            // 温度通知 开关
 
     private Handler handler;            // 声明 handler 注意：这里使用的是 android.os 包中的 handler
@@ -60,24 +68,39 @@ public class EnvFragment extends BaseFragment implements Switch.OnCheckedChangeL
         tvLight = mView.findViewById(R.id.tv_light);
         tvHum = mView.findViewById(R.id.tv_humidity);
 
-        swRefresh = mView.findViewById(R.id.sw_auto_refresh);
         swNotify = mView.findViewById(R.id.sw_notify);
     }
 
     // 重写父类抽象方法 初始化数据
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @SuppressLint("HandlerLeak")
     @Override
     protected void initData() {
+
+        // 检查网络状态
+        if (!NetUtil.isNetworkOK(mContext)) {
+            ToastFactory.show(mContext,"网络不可用！");
+        }
+
+        NotificationManagerCompat manager = NotificationManagerCompat.from(mContext);
+        boolean isOpened = manager.areNotificationsEnabled();
+        if (!isOpened) {
+            Intent intent = new Intent();
+            intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+            Uri uri = Uri.fromParts("package", mContext.getPackageName(), null);
+            intent.setData(uri);
+            startActivity(intent);
+        }
+
         // 通过系统服务 获取通知管理类
         notifyManager = (NotificationManager) mContext.getSystemService(Context.NOTIFICATION_SERVICE);
 
-        // 使用自动刷新开关来为线程标识赋值
-        threadRun = swRefresh.isChecked();
+        // 线程运行标识 默认开启自动刷新
+        threadRun = true;
         // 使用温度通知开关来为通知标识赋值
         notifyRun = swNotify.isChecked();
 
         // 使用在本类中实现的开关改变监听事件接口
-        swRefresh.setOnCheckedChangeListener(this);
         swNotify.setOnCheckedChangeListener(this);
 
         // 定义handler消息处理内容
@@ -97,14 +120,29 @@ public class EnvFragment extends BaseFragment implements Switch.OnCheckedChangeL
 
                 // 发送通知 温度大于30度 且 通知开关已打开
                 if (env.getTemp() > 30 && notifyRun) {
-                    NotificationCompat.Builder builder = new NotificationCompat.Builder(mContext);
-                    builder.setSmallIcon(R.mipmap.ic_launcher);//设置图标
-                    builder.setWhen(System.currentTimeMillis());//时间
-                    builder.setContentTitle("温度提醒");//标题
-                    builder.setContentText("温度过高！");//通知内容
+
+                    // Android 8.0 之后的版本使用通知前
+                    // 需要先定义消息渠道 (Android 8.0 版本号为 26)
+                    if (android.os.Build.VERSION.SDK_INT >= 26) {
+                        NotificationChannel channel = new NotificationChannel("channel_temp",
+                                "温度通知", NotificationManager.IMPORTANCE_DEFAULT);
+
+                        channel.enableLights(true);         // 是否在桌面icon右上角展示小红点
+                        channel.setLightColor(Color.RED);   // 小红点颜色
+                        channel.setShowBadge(true);         // 是否在久按桌面图标时显示此渠道的通知
+                        notifyManager.createNotificationChannel(channel);
+                    }
+
+                    // 在 通知构建者builder 的构造函数中 传入消息渠道ID
+                    NotificationCompat.Builder builder = new NotificationCompat.Builder(mContext,
+                            "channel_temp");
+
+                    builder.setSmallIcon(R.mipmap.ic_launcher);     // 设置图标
+                    builder.setWhen(System.currentTimeMillis());    // 时间
+                    builder.setContentTitle("温度提醒");             // 标题
+                    builder.setContentText("温度过高！已达到" + env.getTemp() + "℃"); // 通知内容
                     builder.setAutoCancel(true);
-                    Notification notify = builder.build();
-                    notifyManager.notify(0,notify);
+                    notifyManager.notify(1234,builder.build()); // 显示通知
                 }
             }
             // 处理结束后子线程会回收到[主线程](UI线程)循环
@@ -116,6 +154,7 @@ public class EnvFragment extends BaseFragment implements Switch.OnCheckedChangeL
             public void run() {
                 // 只要线程标识许可就一直循环
                 while (threadRun) {
+
                     // 请求环境数据
                     queryEnv();
 
@@ -161,18 +200,6 @@ public class EnvFragment extends BaseFragment implements Switch.OnCheckedChangeL
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
         switch (buttonView.getId()) {
-            // 自动刷新
-            case R.id.sw_auto_refresh:
-                if (isChecked) {
-                    // 打开
-                    threadRun = true;       // 给予线程标识许可
-                    autoRefresh.start();    // 启动线程
-                } else {
-                    // 关闭
-                    threadRun = false;      // 撤回线程标识许可 线程自动停止
-                }
-                break;
-
             // 温度通知
             case R.id.sw_notify:
                 // 使用温度通知开关来为通知标识赋值

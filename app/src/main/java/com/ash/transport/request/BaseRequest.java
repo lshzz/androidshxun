@@ -4,6 +4,7 @@ import android.content.Context;
 
 import com.ash.transport.factory.ToastFactory;
 import com.ash.transport.utils.NetUtil;
+import com.ash.transport.utils.Session;
 
 /*----------------------------------------------*
  * @package:   com.ash.transport.request
@@ -34,10 +35,7 @@ public abstract class BaseRequest {
         // 通过SharedPreferences获取已储存的IP地址
         // 并设置url地址
         // (只包含前部共用地址，后部地址根据getAddress()抽象方法的不同实现获取)
-        url = "http://"
-                + context.getSharedPreferences("ipset", 0).getString("ip", "47.106.226.220") + ":"
-                + 8080
-                + "/transportservice/type/jason/action/";
+        url = "http://" + Session.ip + ":" + 8080 + "/transportservice/type/jason/action/";
 
         /*  url前部形式：http://47.106.226.220:8080/transportservice/type/jason/action/
          *  url后部形式：GetCarSpeed.do

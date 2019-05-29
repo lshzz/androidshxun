@@ -43,7 +43,7 @@ public class BusStationOneFragment extends BaseFragment {
     @Override
     protected void initData() {
 
-        // 线程运行表示 默认开启自动刷新
+        // 线程运行标识 默认开启自动刷新
         threadRun = true;
 
         // 定义 自动刷新 子线程
@@ -52,6 +52,7 @@ public class BusStationOneFragment extends BaseFragment {
             public void run() {
                 // 只要线程标识许可就一直循环
                 while (threadRun) {
+
                     // 请求公交站台数据
                     queryBusStation();
 

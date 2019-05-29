@@ -2,18 +2,11 @@ package com.ash.transport.ui.fragment;
 
 import android.content.Intent;
 import android.net.Uri;
-import android.support.design.widget.TabLayout;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.ash.transport.R;
-import com.ash.transport.ui.adapter.ViewPagerAdapter;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /*----------------------------------------------*
  * @package:   com.ash.transport.ui.fragment

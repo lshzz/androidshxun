@@ -22,6 +22,7 @@ import com.ash.transport.request.SetCarActionRequest;
 import com.ash.transport.service.CarInfoService;
 import com.ash.transport.ui.activity.ChargeActivity;
 import com.ash.transport.ui.activity.RecordActivity;
+import com.ash.transport.utils.NetUtil;
 
 import java.io.InputStream;
 import java.util.List;
@@ -91,6 +92,11 @@ public class CarFragment extends BaseFragment implements View.OnClickListener {
     @SuppressLint("HandlerLeak")
     @Override
     protected void initData() {
+
+        // 检查网络状态
+        if (!NetUtil.isNetworkOK(mContext)) {
+            ToastFactory.show(mContext,"网络不可用！");
+        }
 
         // 使用本类中实现的按钮监听事件
         btnCharge.setOnClickListener(this);

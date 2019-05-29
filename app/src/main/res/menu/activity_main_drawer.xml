@@ -6,32 +6,31 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_car"
-            android:icon="@drawable/ic_menu_camera"
+            android:icon="@drawable/car"
             android:title="@string/menu_car" />
         <item
             android:id="@+id/nav_env"
-            android:icon="@drawable/ic_menu_gallery"
+            android:icon="@drawable/env"
             android:title="@string/menu_env" />
         <item
             android:id="@+id/nav_road"
-            android:icon="@drawable/ic_menu_slideshow"
+            android:icon="@drawable/road"
             android:title="@string/menu_road" />
         <item
             android:id="@+id/nav_bus"
-            android:icon="@drawable/ic_menu_manage"
+            android:icon="@drawable/bus"
             android:title="@string/menu_bus" />
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/about"
+            android:title="@string/menu_about" />
     </group>
 
-    <item android:title="Communicate">
+    <item android:title="其他">
         <menu>
             <item
-                android:id="@+id/nav_about"
-                android:icon="@drawable/ic_menu_manage"
-                android:title="@string/menu_about" />
-
-            <item
                 android:id="@+id/nav_help"
-                android:icon="@drawable/ic_menu_send"
+                android:icon="@drawable/help"
                 android:title="@string/menu_help" />
         </menu>
     </item>

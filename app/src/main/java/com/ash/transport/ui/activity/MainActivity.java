@@ -15,12 +15,17 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.ash.transport.R;
+import com.ash.transport.config.AppConfig;
+import com.ash.transport.factory.DialogFactory;
 import com.ash.transport.factory.ToastFactory;
 import com.ash.transport.ui.fragment.AboutFragment;
 import com.ash.transport.ui.fragment.BusFragment;
 import com.ash.transport.ui.fragment.CarFragment;
 import com.ash.transport.ui.fragment.EnvFragment;
 import com.ash.transport.ui.fragment.RoadFragment;
+import com.ash.transport.ui.widget.EditDialog;
+import com.ash.transport.utils.RegUtil;
+import com.ash.transport.utils.Session;
 
 /*----------------------------------------------*
  * @package:   com.ash.transport.ui.activity
@@ -62,6 +67,13 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
     // 重写父类抽象方法 初始化数据
     @Override
     protected void initData() {
+
+        // 初始化请求服务器IP地址
+        // 默认使用远端虚拟沙盘地址
+        Session.ip = AppConfig.IP_DEFAULT;      // 47.106.226.220
+        Session.ipFlag = AppConfig.IP_REMOTE;   // remote
+
+        // 从本地shared文件中读取账户信息并显示到侧滑菜单上
         SharedPreferences shared = getSharedPreferences("userInfo", MODE_PRIVATE);
         tvName.setText(shared.getString("name", "name"));
         tvContact.setText(shared.getString("contact", "contact"));
@@ -93,10 +105,10 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
             drawer.closeDrawer(GravityCompat.START);
         } else {
 
-            // 按两次返回键退出
+            // 按两次返回键退出 (时间间隔大于两秒)
             if ((System.currentTimeMillis() - exitTime) > 2000) {
                 // 第一次 弹出提示
-                ToastFactory.show(MainActivity.this,"再按一次退出程序");
+                ToastFactory.show(MainActivity.this, "再按一次退出程序");
                 exitTime = System.currentTimeMillis();
             } else {
                 // 第二次 退出程序
@@ -119,16 +131,53 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
+
+            // 选择服务器
+            case R.id.action_setting_ip:
+
+                // 显示单选对话框
+                DialogFactory.showSelectDialog(MainActivity.this,
+                        "选择服务器",
+                        new String[]{"远端虚拟沙盘", "本地仿真沙盘"},
+                        new EditDialog.OnListener() {
+
+                    // 重写 EditDialog.OnListener 接口事件
+                    @Override
+                    public void onAfter(String input) {
+                        // 如果IP地址格式验证通过
+                        if (RegUtil.isIP(input)) {
+                            // 储存IP地址
+                            Session.ip = input;
+                            Session.ipFlag = AppConfig.IP_LOCAL;
+                            ToastFactory.show(MainActivity.this, "使用本地仿真沙盘：" + input, true);
+                        } else {
+                            ToastFactory.show(MainActivity.this, "IP地址格式不正确！");
+                        }
+                    }
+                });
+
+                break;
+
+            // 登出账户
             case R.id.action_logout:
+                // 从 shared 中获取用户信息
                 SharedPreferences shared = getSharedPreferences("userInfo", MODE_PRIVATE);
+                // 编辑 shared 中的 isGuide 字段
                 SharedPreferences.Editor editor = shared.edit();
+                // isGuide = true 下次启动时需要进入重新登录界面
                 editor.putBoolean("isGuide", true);
+                // apply 应用修改
                 editor.apply();
+
+                // 启动登录界面
                 startActivity(new Intent(MainActivity.this, LoginActivity.class));
+                // 销毁当前界面 防止返回
                 finish();
                 break;
 
+            // 退出程序
             case R.id.action_exit:
+                finish();
                 break;
         }
 

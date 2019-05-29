@@ -13,6 +13,9 @@ import com.ash.transport.factory.ToastFactory;
 import com.ash.transport.model.RecordInfo;
 import com.ash.transport.request.BaseRequest;
 import com.ash.transport.request.SetBalanceRequest;
+import com.ash.transport.ui.widget.EditDialog;
+import com.ash.transport.utils.NetUtil;
+import com.ash.transport.utils.RegUtil;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -47,15 +50,15 @@ public class ChargeActivity extends BaseActivity implements View.OnClickListener
     // 重写父类抽象方法 初始化视图
     @Override
     protected void initView() {
+        // 设置顶部原生标题栏标题 已在清单文件中设置
+        // ChargeActivity.this.setTitle("车辆余额充值");
+
         // 显示顶部原生标题栏返回按钮
         android.support.v7.app.ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setHomeButtonEnabled(true);
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
-
-        // 设置顶部原生标题栏标题
-        ChargeActivity.this.setTitle("车辆余额充值");
 
         tvCarId = findViewById(R.id.iv_car_id);
         btnMoney20 = findViewById(R.id.btn_money_20);
@@ -68,6 +71,12 @@ public class ChargeActivity extends BaseActivity implements View.OnClickListener
     @SuppressLint("SetTextI18n")
     @Override
     protected void initData() {
+
+        // 检查网络状态
+        if (!NetUtil.isNetworkOK(ChargeActivity.this)) {
+            ToastFactory.show(ChargeActivity.this, "网络不可用！");
+        }
+
         // Android 规范是以 包名+类名+变量名 来命名意图传值键名
         carId = getIntent().getIntExtra("com.ash.transport.ui.fragment.CarFragment.carId", 0);
         tvCarId.setText(carId + "");
@@ -108,6 +117,20 @@ public class ChargeActivity extends BaseActivity implements View.OnClickListener
                 break;
 
             case R.id.btn_money_custom:     // 自定义金额
+
+                EditDialog.show(ChargeActivity.this, "自定义充值金额", new EditDialog.OnListener() {
+                    @Override
+                    public void onAfter(String input) {
+
+                        if (RegUtil.isInteger3(input)) {
+                            charge(Integer.valueOf(input));
+                        } else {
+                            ToastFactory.show(ChargeActivity.this, "单次充值金额不能超过999元");
+                        }
+
+                    }
+                });
+
                 break;
         }
     }
@@ -151,9 +174,9 @@ public class ChargeActivity extends BaseActivity implements View.OnClickListener
 
                     recordDao.insert(record);
 
-                    ToastFactory.show(ChargeActivity.this,"充值成功",true);
+                    ToastFactory.show(ChargeActivity.this, "充值成功", true);
                 } else {
-                    ToastFactory.show(ChargeActivity.this,"充值失败",true);
+                    ToastFactory.show(ChargeActivity.this, "充值失败", true);
                 }
 
                 // 充值结束后销毁当前页面

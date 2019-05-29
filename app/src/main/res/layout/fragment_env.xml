@@ -12,13 +12,13 @@
 
         <TextView
             android:id="@+id/tv_temperature"
-            android:layout_width="170dp"
-            android:layout_height="120dp"
+            android:layout_width="140dp"
+            android:layout_height="100dp"
             android:layout_gravity="center"
             android:textAlignment="center"
             android:layout_marginLeft="30dp"
-            android:text="27℃"
-            android:textSize="80dp"
+            android:text="？℃"
+            android:textSize="60dp"
             android:textStyle="bold"
             android:textColor="#ffffff"/>
 
@@ -31,20 +31,9 @@
             android:orientation="vertical">
 
             <Switch
-                android:id="@+id/sw_auto_refresh"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="自动刷新："
-                android:checked="true"
-                android:textColor="#eeeeee"
-                android:textSize="20dp"
-                android:textStyle="bold"/>
-
-            <Switch
                 android:id="@+id/sw_notify"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
                 android:text="温度通知："
                 android:textColor="#eeeeee"
                 android:textSize="20dp"
@@ -78,7 +67,7 @@
                     android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="31"
+                    android:text="？"
                     android:textSize="25dp"
                     android:textStyle="bold"
                     android:textColor="#000000"/>
@@ -102,7 +91,7 @@
                     android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="541"
+                    android:text="？"
                     android:textSize="25dp"
                     android:textStyle="bold"
                     android:textColor="#000000"/>
@@ -136,7 +125,7 @@
                     android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="1354"
+                    android:text="？"
                     android:textSize="25dp"
                     android:textStyle="bold"
                     android:textColor="#000000"/>
@@ -160,7 +149,7 @@
                     android:layout_gravity="center"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="34"
+                    android:text="？"
                     android:textSize="25dp"
                     android:textStyle="bold"
                     android:textColor="#000000"/>

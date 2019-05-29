@@ -2,21 +2,19 @@ package com.ash.transport.ui.fragment;
 
 import android.annotation.SuppressLint;
 import android.graphics.Color;
-import android.os.Handler;
-import android.os.Message;
-import android.view.View;
-import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.ash.transport.R;
 import com.ash.transport.factory.SpinnerFactory;
+import com.ash.transport.factory.ToastFactory;
 import com.ash.transport.model.TrafficInfo;
 import com.ash.transport.request.BaseRequest;
 import com.ash.transport.request.GetRoadStatusRequest;
 import com.ash.transport.request.GetTrafficRequest;
 import com.ash.transport.ui.adapter.TrafficsAdapter;
+import com.ash.transport.utils.NetUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,21 +30,18 @@ import java.util.List;
  * @继承关系:   RoadFragment ← BaseFragment ← [Fragment]
  *----------------------------------------------*/
 public class RoadFragment extends BaseFragment {
-    private TextView[] tvRoad;
-    private Spinner spnSortMode;
-    private Button btnQuery;
-    private ListView lvTraffic;
-    private TrafficsAdapter adapter;
+    private TextView[] tvRoad;          // 1~4号道路 文本框数组
+    private Spinner spnSortMode;        // 排序 下拉列表框
+    private ListView lvTraffic;         // 红绿灯信息 列表容器
+    private TrafficsAdapter adapter;    // 红绿灯信息 列表适配器
 
-    private int[] iStatus;
-    private String[] sStatus;
-    private String[] cStatus;
-    private String[] sSpnTitles;
-    private int sortMode;
-    private int sortField;
-    private List<TrafficInfo> traffics;
+    private String[] statusLabel;       // 道路状态标签 字符串
+    private String[] statusColors;      // 道路状态颜色值 字符串
+    private String[] sSpnTitles;        // 排序下拉列表框项目标题 字符串数组
+    private int sortMode;               // 排序方式 升序 降序
+    private int sortField;              // 排序字段 0~3
+    private List<TrafficInfo> traffics; // 红绿灯信息集合
 
-    private Handler handler;            // 声明 handler 注意：这里使用的是 android.os 包中的 handler
     private Thread autoRefresh;         // 自动刷新 线程
     private boolean threadRun;          // 线程运行 标识
 
@@ -68,19 +63,33 @@ public class RoadFragment extends BaseFragment {
 
         lvTraffic = mView.findViewById(R.id.lv_traffic);
         spnSortMode = mView.findViewById(R.id.spn_sort_mode);
-        btnQuery = mView.findViewById(R.id.btn_query);
     }
 
     // 重写父类抽象方法 初始化数据
     @SuppressLint("HandlerLeak")
     @Override
     protected void initData() {
+
+        // 检查网络状态
+        if (!NetUtil.isNetworkOK(mContext)) {
+            ToastFactory.show(mContext, "网络不可用！");
+        }
+
+        // 初始化红绿灯信息集合
         traffics = new ArrayList<>();
 
+        // 实例化红绿灯列表适配器
+        adapter = new TrafficsAdapter(mContext,traffics);
 
-        iStatus = new int[4];
+        // 为红绿灯列表设置适配器
+        lvTraffic.setAdapter(adapter);
 
-        sStatus = new String[]{
+        // 初始化排序规则 默认按路口升序排列
+        sortMode = 0;
+        sortField = 0;
+
+        // 初始化 道路状态标签 字符串
+        statusLabel = new String[]{
                 "通畅",
                 "较通畅",
                 "拥挤",
@@ -88,14 +97,16 @@ public class RoadFragment extends BaseFragment {
                 "爆表"
         };
 
-        cStatus = new String[]{
-                "#049B07",
-                "#73C400",
-                "#CBCB20",
-                "#A55921",
-                "#4c060e"
+        // 初始化 道路状态颜色值 字符串
+        statusColors = new String[]{
+                "#049B07",      // 通畅 颜色
+                "#73C400",      // 较通畅 颜色
+                "#CBCB20",      // 拥挤 颜色
+                "#A55921",      // 堵塞 颜色
+                "#4c060e"       // 爆表 颜色
         };
 
+        // 初始化 排序下拉列表框 项目标题 字符串数组
         sSpnTitles = new String[]{
                 "路口升序",
                 "路口降序",
@@ -107,21 +118,23 @@ public class RoadFragment extends BaseFragment {
                 "绿灯降序"
         };
 
-        handler = new Handler() {
-            public void handleMessage(Message msg) {
-                // 通知 adapter 更新 ListView 数据
-                adapter.notifyDataSetChanged();
-            }
-        };
-
+        // 通过 Spinner工厂类 创建下拉列表框
         SpinnerFactory.getSpinner(mContext, spnSortMode, sSpnTitles, new SpinnerFactory.OnItemSelected() {
+            // 项目列表选中事件
             @Override
             public void onSelected(int position) {
+
+                // 通过求余判断排序方式是升序还是降序
                 sortMode = position % 2 == 0 ? 0 : 1;
+
+                // 通过三目运算符快速判断需要排序的字段
                 sortField = position < 2 ? 0
                         : position < 4 ? 1
                         : position < 6 ? 2
                         : 3;
+
+                // 排序方式选择后 查询红绿灯信息
+                queryTrafficInfo();
             }
         });
 
@@ -147,17 +160,12 @@ public class RoadFragment extends BaseFragment {
             }
         });
 
+        // 默认开启自动刷新
         threadRun = true;
         autoRefresh.start();
-
-        btnQuery.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                queryTrafficInfo();
-            }
-        });
     }
 
+    // 定义 查询道路状态 方法
     private void queryRoadStatus(final int roadId) {
         GetRoadStatusRequest getRoadStatusRequest = new GetRoadStatusRequest(mContext);
         getRoadStatusRequest.setRoadId(roadId);
@@ -165,53 +173,101 @@ public class RoadFragment extends BaseFragment {
             @Override
             public void onReturn(Object data) {
                 if (data != null) {
+                    // 获取返回的状态值 1~5
                     int status = (int) data;
-                    tvRoad[roadId].setText(sStatus[status - 1]);
-                    tvRoad[roadId].setBackgroundColor(Color.parseColor(cStatus[status - 1]));
+                    // 根据状态值设置道路状态标签
+                    tvRoad[roadId].setText(statusLabel[status - 1]);
+                    // 根据状态值设置道路状态颜色
+                    tvRoad[roadId].setBackgroundColor(Color.parseColor(statusColors[status - 1]));
                 }
             }
         });
     }
 
+    // 定义 查询红绿灯信息 方法
     private void queryTrafficInfo() {
+        // 先清空红绿灯信息集合
         traffics.clear();
 
+        // 线程中传值只能使用引用类型
+        final int[] count = {0};
 
-        GetTrafficRequest getTrafficRequest = new GetTrafficRequest(mContext);
+        // 循环请求1~4号路口的红绿灯信息
+        for (int i = 1; i < 5; i++) {
+            GetTrafficRequest getTrafficRequest = new GetTrafficRequest(mContext);
+            getTrafficRequest.setRoadId(i);
+            getTrafficRequest.connec(new BaseRequest.OnGetDataListener() {
+                @Override
+                public void onReturn(Object data) {
 
-        getTrafficRequest.setRoadId(1);
-        getTrafficRequest.connec(new BaseRequest.OnGetDataListener() {
-            @Override
-            public void onReturn(Object data) {
-                traffics.add((TrafficInfo) data);
-                adapter = new TrafficsAdapter(mContext,traffics);
-                lvTraffic.setAdapter(adapter);
-//                adapter.notifyDataSetChanged();
-            }
-        });
+                    // 将请求到的红绿灯信息实体类储存到集合中
+                    traffics.add((TrafficInfo) data);
 
+                    // 记录循环次数(循环变量i 不能使用，在线程中传值只能使用引用类型)
+                    count[0]++;
 
-//        adapter.notifyDataSetChanged();
-//        sortList();
-//
-//        // 通过 handler 创建线程消息类 并通知其执行 handleMessage 方法
-//        Message msg = handler.obtainMessage();
-//
-//        // 读取 list 中指定编号的车辆数据放入msg.obj
-//        msg.obj = traffics;
-//
-//        // 通知handler处理消息
-//        // msg.obj 内的对象会传递到 handleMessage 消息处理中使用
-//        handler.sendMessage(msg);
+                    // 判断红绿灯信息集合储存完4个路口后
+                    if (count[0] == 4) {
+                        // 进行集合排序
+                        sortList();
+                        // 通知
+                        adapter.notifyDataSetChanged();
+                    }
+                }
+            });
+        }
     }
 
+    // 定义 红绿灯信息集合排序 方法
     private void sortList() {
+        for (int i=0; i<traffics.size()-1; i++) {
+            for (int j=0; j<traffics.size()-i-1;j++) {
 
+                // 先取出当前集合元素
+                int[] list1 = new int[] {
+                        traffics.get(j).getRoadId(),
+                        traffics.get(j).getRedTime(),
+                        traffics.get(j).getYellowTime(),
+                        traffics.get(j).getGreenTime(),
+                };
+
+                // 再取出后一个集合元素
+                int[] list2 = new int[]{
+                        traffics.get(j + 1).getRoadId(),
+                        traffics.get(j + 1).getRedTime(),
+                        traffics.get(j + 1).getYellowTime(),
+                        traffics.get(j + 1).getGreenTime(),
+                };
+
+
+                if (sortMode == 0) {
+
+                    // 升序排序
+                    if (list1[sortField] > list2[sortField]) {
+                        TrafficInfo temp = traffics.get(j);
+                        traffics.set(j,traffics.get(j+1));
+                        traffics.set(j+1,temp);
+                    }
+
+                } else {
+
+                    // 降序排序
+                    if (list1[sortField] < list2[sortField]) {
+                        TrafficInfo temp = traffics.get(j);
+                        traffics.set(j,traffics.get(j+1));
+                        traffics.set(j+1,temp);
+                    }
+
+                }
+            }
+        }
     }
 
+    // 重写页面暂停时触发事件方法
     @Override
     public void onPause() {
         super.onPause();
-        threadRun = false;
+        // 页面不可见后 及时关闭线程
+        threadRun = false;  // 撤回线程标识许可 线程自动停止
     }
 }

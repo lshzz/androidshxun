@@ -18,7 +18,7 @@
         android:layout_marginTop="30dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="1号公交："
+        android:text="1号公交：?"
         android:textSize="20dp"
         android:textColor="#666666"/>
 
@@ -27,7 +27,7 @@
         android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="2号公交："
+        android:text="2号公交：?"
         android:textSize="20dp"
         android:textColor="#666666"/>
 

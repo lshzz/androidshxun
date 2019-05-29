@@ -3,9 +3,7 @@ package com.ash.transport.ui.activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.CountDownTimer;
-import android.view.Window;
 import android.view.WindowManager;
-
 
 import com.ash.transport.R;
 

@@ -5,7 +5,9 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
 
 import com.ash.transport.R;
+import com.ash.transport.factory.ToastFactory;
 import com.ash.transport.ui.adapter.ViewPagerAdapter;
+import com.ash.transport.utils.NetUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,6 +46,12 @@ public class BusFragment extends BaseFragment {
     // 重写父类抽象方法 初始化数据
     @Override
     protected void initData() {
+
+        // 检查网络状态
+        if (!NetUtil.isNetworkOK(mContext)) {
+            ToastFactory.show(mContext,"网络不可用！");
+        }
+
         titles = new ArrayList<>();     // 初始化 标题 字符串集合
         titles.add("1号站台");           // 添加 1号站台 标题
         titles.add("2号站台");           // 添加 2号站台 标题

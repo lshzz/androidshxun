@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.ash.transport">
 
     <!-- 检查网络状态权限 -->
@@ -11,11 +12,12 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/icon"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
 
         <activity
             android:name=".ui.activity.GuideActivity"
@@ -37,8 +39,16 @@
             android:name=".ui.activity.LoginActivity"
             android:label="完善信息">
         </activity>
-        <activity android:name=".ui.activity.RecordActivity" />
-        <activity android:name=".ui.activity.ChargeActivity"></activity>
+
+        <activity
+            android:name=".ui.activity.RecordActivity"
+            android:label="充值记录">
+        </activity>
+
+        <activity
+            android:name=".ui.activity.ChargeActivity"
+            android:label="车辆余额充值">
+        </activity>
 
     </application>
 
