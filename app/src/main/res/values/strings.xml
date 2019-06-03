@@ -13,9 +13,10 @@
     <string name="menu_env">出行环境</string>
     <string name="menu_bus">城市公交</string>
     <string name="menu_road">道路状态</string>
-    <string name="menu_settings">选择服务器</string>
+    <string name="menu_custom">创意模块</string>
     <string name="menu_about">关于</string>
     <string name="menu_help">联系客服</string>
+    <string name="menu_settings">选择服务器</string>
 
     <string name="license">Copyright 2019 Ashinch\n\n
 Licensed under the Apache License, Version 2.0 (the "License");

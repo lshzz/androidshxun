@@ -15,7 +15,7 @@ import java.util.List;
 /*----------------------------------------------*
  * @package:   com.ash.transport.ui.fragment
  * @fileName:  BusFragment.java
- * @describe:  城市公交总 页面碎片类
+ * @describe:  城市公交 总页面碎片类
  *----------------------------------------------*
  * @author:    ash
  * @email:     Glaxyinfinite@outlook.com

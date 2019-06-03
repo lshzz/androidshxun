@@ -11,7 +11,7 @@ import com.ash.transport.R;
 /*----------------------------------------------*
  * @package:   com.ash.transport.ui.fragment
  * @fileName:  AboutFragment.java
- * @describe:  关于页面 碎片类
+ * @describe:  关于 页面碎片类
  *----------------------------------------------*
  * @author:    ash
  * @email:     Glaxyinfinite@outlook.com

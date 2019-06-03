@@ -21,6 +21,10 @@
             android:icon="@drawable/bus"
             android:title="@string/menu_bus" />
         <item
+            android:id="@+id/nav_custom"
+            android:icon="@drawable/idea"
+            android:title="@string/menu_custom" />
+        <item
             android:id="@+id/nav_about"
             android:icon="@drawable/about"
             android:title="@string/menu_about" />

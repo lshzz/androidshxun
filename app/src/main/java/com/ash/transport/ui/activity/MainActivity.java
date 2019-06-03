@@ -21,6 +21,7 @@ import com.ash.transport.factory.ToastFactory;
 import com.ash.transport.ui.fragment.AboutFragment;
 import com.ash.transport.ui.fragment.BusFragment;
 import com.ash.transport.ui.fragment.CarFragment;
+import com.ash.transport.ui.fragment.CustomFragment;
 import com.ash.transport.ui.fragment.EnvFragment;
 import com.ash.transport.ui.fragment.RoadFragment;
 import com.ash.transport.ui.widget.EditDialog;
@@ -210,6 +211,12 @@ public class MainActivity extends BaseActivity implements NavigationView.OnNavig
             case R.id.nav_bus:
                 gotoFragment(R.id.content_main, new BusFragment());
                 MainActivity.this.setTitle(R.string.menu_bus);
+                break;
+
+            // 创意模块
+            case R.id.nav_custom:
+                gotoFragment(R.id.content_main, new CustomFragment());
+                MainActivity.this.setTitle(R.string.menu_custom);
                 break;
 
             // 关于
