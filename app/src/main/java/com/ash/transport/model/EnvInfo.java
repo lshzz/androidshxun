@@ -10,11 +10,11 @@ package com.ash.transport.model;
  * @date:      on 2019-05-25 16:34
  *----------------------------------------------*/
 public class EnvInfo {
-    private int temp;
-    private int pm;
-    private int co2;
-    private int light;
-    private int hum;
+    private int temp;       // 温度
+    private int pm;         // pm2.5
+    private int co2;        // 二氧化碳
+    private int light;      // 光照强度
+    private int hum;        // 湿度
 
     public int getTemp() {
         return temp;

@@ -199,7 +199,7 @@ public class NetUtil {
                     }
 
                     // 利用监听器接口触发事件
-                    // 在子线程中，[安全]返回数据的正确方法之一：
+                    // 在子线程中，[安全]回调数据的正确方法之一：
                     // 向 响应事件监听器接口 成功事件 传递服务器结果
                     listener.success(result);
                 }
@@ -222,6 +222,7 @@ public class NetUtil {
                 handler.post(new Runnable() {
                     @Override
                     public void run() {
+                        // 使用定义好的[响应事件监听器]回调成功事件
                         listener.success(result);
                     }
                 });
@@ -234,6 +235,7 @@ public class NetUtil {
                 handler.post(new Runnable() {
                     @Override
                     public void run() {
+                        // 使用定义好的[响应事件监听器]回调失败事件
                         listener.error(message);
                     }
                 });

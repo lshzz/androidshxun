@@ -32,7 +32,7 @@ public abstract class BaseRequest {
         // 接收上下文
         this.context = context;
 
-        // 通过SharedPreferences获取已储存的IP地址
+        // 通过Session获取已储存的IP地址
         // 并设置url地址
         // (只包含前部共用地址，后部地址根据getAddress()抽象方法的不同实现获取)
         url = "http://" + Session.ip + ":" + 8080 + "/transportservice/type/jason/action/";

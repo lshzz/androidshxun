@@ -10,10 +10,10 @@ package com.ash.transport.model;
  * @date:      on 2019-05-26 21:38
  *----------------------------------------------*/
 public class TrafficInfo {
-    private int roadId;
-    private int redTime;
-    private int yellowTime;
-    private int greenTime;
+    private int roadId;         // 路口编号
+    private int redTime;        // 红灯时长
+    private int yellowTime;     // 黄灯时长
+    private int greenTime;      // 绿灯时长
 
     public int getRoadId() {
         return roadId;

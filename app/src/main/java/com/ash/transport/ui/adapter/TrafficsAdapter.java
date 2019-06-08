@@ -62,7 +62,9 @@ public class TrafficsAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        // 获取布局填充器的另一种方法
+        // 获取布局填充器
+        // 不在 Activity 或 Fragment 子类内获取布局填充器
+        // 需要使用 getSystemService(Context.LAYOUT_INFLATER_SERVICE)
         LayoutInflater inflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
@@ -70,12 +72,12 @@ public class TrafficsAdapter extends BaseAdapter {
         View view;
 
         if (convertView == null) {
-            // 没有缓存，需要重新生成
+            // 没有缓存，需要重新填充
             // 因为getView()返回的对象，Adapter会自动填充ListView
-            view = inflater.inflate(R.layout.item_traffic,null);
+            view = inflater.inflate(R.layout.item_traffic, null);
             // ListView滑动卡顿多数是因为频繁填充布局导致
         } else {
-            // 有缓存，不需要重新生成
+            // 有缓存，不需要重新填充
             view = convertView;
         }
 

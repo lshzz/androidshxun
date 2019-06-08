@@ -19,13 +19,13 @@ public class RegUtil {
     private static final Pattern PATTERN_IP = Pattern.compile("^(25[0-5]|2[0-4]\\d|[0-1]?\\d?\\d)(\\.(25[0-5]|2[0-4]\\d|[0-1]?\\d?\\d)){3}$");
 
 
-    // 验证字符串是否符合 IPv4 地址 规则
-    public static boolean isIP(String ip) {
-        return PATTERN_IP.matcher(ip).matches();
-    }
-
     // 验证字符串是否符合 3位整数 规则
     public static boolean isInteger3(String money) {
         return PATTERN_INTEGER_3.matcher(money).matches();
+    }
+
+    // 验证字符串是否符合 IPv4 地址 规则
+    public static boolean isIP(String ip) {
+        return PATTERN_IP.matcher(ip).matches();
     }
 }

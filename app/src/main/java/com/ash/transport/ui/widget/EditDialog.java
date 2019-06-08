@@ -5,7 +5,9 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.widget.EditText;
 
+import com.ash.transport.config.AppConfig;
 import com.ash.transport.factory.ToastFactory;
+import com.ash.transport.utils.Session;
 
 /*----------------------------------------------*
  * @package:   com.ash.transport.ui.widget
@@ -28,6 +30,11 @@ public class EditDialog {
     public static void show(final Context context, String title, final EditDialog.OnListener onAfter) {
         // 初始化一个编辑框
         final EditText et = new EditText(context);
+
+        // 如已设置了IP 则显示出来
+        if (!Session.ip.equals(AppConfig.IP_DEFAULT)) {
+            et.setText(Session.ip);
+        }
 
         new AlertDialog.Builder(context).setTitle(title)
                 .setView(et)    // 给对话框视图添加一个编辑框

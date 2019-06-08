@@ -89,16 +89,20 @@ public class DialogFactory {
             @Override
             public void onClick(DialogInterface dialog, int which) {
 
-                if (which == 0) {           // 选择 远端虚拟沙盘
-                    // 储存IP地址
-                    Session.ip = AppConfig.IP_DEFAULT;      // 47.106.226.220
-                    Session.ipFlag = AppConfig.IP_REMOTE;   // remote
-                    ToastFactory.show(context, "使用远端虚拟沙盘：" + AppConfig.IP_DEFAULT, true);
+                switch (which) {
+                    // 选择 远端虚拟沙盘
+                    case 0:
+                        // 储存IP地址
+                        Session.ip = AppConfig.IP_DEFAULT;      // 47.106.226.220
+                        Session.ipFlag = AppConfig.IP_REMOTE;   // remote
+                        ToastFactory.show(context, "使用远端虚拟沙盘：" + AppConfig.IP_DEFAULT, true);
+                        break;
 
-                } else if (which == 1) {    // 选择 本地仿真沙盘
-
-                    // 显示带编辑框的对话框 并交给外部实现接口处理
-                    EditDialog.show(context, "设置IP地址", onAfter);
+                    // 选择 本地仿真沙盘
+                    case 1:
+                        // 显示带编辑框的对话框 并交给外部实现接口处理
+                        EditDialog.show(context, "设置IP地址", onAfter);
+                        break;
                 }
 
                 dialog.dismiss();           // 单选对话框需要手动关闭

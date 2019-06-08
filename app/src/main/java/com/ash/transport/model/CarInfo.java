@@ -10,16 +10,16 @@ package com.ash.transport.model;
  * @date:      on 2019-05-22 20:12
  *----------------------------------------------*/
 public class CarInfo {
-    private String carId;
-    private String make;
-    private String engine;
-    private String frame;
-    private String type;
-    private String licenseType;
-    private String licenseNum;
-    private String vioNum;
-    private String points;
-    private String fine;
+    private String carId;           // 车辆编号
+    private String make;            // 品牌型号
+    private String engine;          // 发动机
+    private String frame;           // 车架
+    private String type;            // 车辆类型
+    private String licenseType;     // 牌照类型
+    private String licenseNum;      // 车牌号码
+    private String vioNum;          // 违章次数
+    private String points;          // 总扣分
+    private String fine;            // 总罚款
 
     public String getCarId() {
         return carId;

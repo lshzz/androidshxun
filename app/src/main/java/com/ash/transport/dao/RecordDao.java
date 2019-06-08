@@ -86,7 +86,7 @@ public class RecordDao {
         return depositRecord;
     }
 
-    // 根据useId取出信息
+    // 根据username取出信息
     public List<RecordInfo> queryByUserId(String name) {
         List<RecordInfo> depositRecords = new ArrayList<RecordInfo>();
         try {

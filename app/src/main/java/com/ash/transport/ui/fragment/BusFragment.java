@@ -57,9 +57,9 @@ public class BusFragment extends BaseFragment {
         titles.add("2号站台");           // 添加 2号站台 标题
 
         // 因为面向对象的多态特性
-        // 声明 List<BaseFragment> 基本碎片元素集合
+        // 声明 List<BaseFragment> 基类碎片元素集合
         // 可以储存 BaseFragment 的所有子类对象
-        fragments = new ArrayList<>();                  // 初始化 视图页面 碎片集合
+        fragments = new ArrayList<BaseFragment>();      // 初始化 视图页面 碎片集合
         fragments.add(new BusStationOneFragment());     // 添加 1号站台 页面碎片
         fragments.add(new BusStationTwoFragment());     // 添加 2号站台 页面碎片
 

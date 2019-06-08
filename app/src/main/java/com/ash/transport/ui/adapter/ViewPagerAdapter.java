@@ -19,26 +19,30 @@ import java.util.List;
  * @继承关系:   ViewPagerAdapter ← [FragmentPagerAdapter]
  *----------------------------------------------*/
 public class ViewPagerAdapter extends FragmentPagerAdapter {
-    private List<String> titles;
-    private List<BaseFragment> fragments;
+    private List<String> titles;            // 标题列表
+    private List<BaseFragment> fragments;   // 碎片列表
 
+    // 构造函数
     public ViewPagerAdapter(FragmentManager fm, List<String> titles, List<BaseFragment> fragments) {
         super(fm);
         this.titles = titles;
         this.fragments = fragments;
     }
 
+    // 重写 获取子项 方法
     @Override
     public Fragment getItem(int position) {
         return fragments.get(position);
     }
 
+    // 重写 获取总数量 方法
     @Override
     public int getCount() {
         // return fragments.size();
         return titles.size();
     }
 
+    // 重写 获取页面标题 方法
     @Override
     public CharSequence getPageTitle(int position) {
         return titles.get(position);

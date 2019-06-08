@@ -20,11 +20,7 @@ public class ToastFactory {
 
     // 重载 长消息
     public static void show(Context context, String text, boolean isLong) {
-        if (isLong) {
-            Toast.makeText(context, text, Toast.LENGTH_LONG).show();
-        } else {
-            Toast.makeText(context, text, Toast.LENGTH_SHORT).show();
-        }
-
+        int length = isLong ? Toast.LENGTH_LONG : Toast.LENGTH_SHORT;
+        Toast.makeText(context, text, length).show();
     }
 }

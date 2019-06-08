@@ -75,7 +75,7 @@ public class RecordInfo {
         this.chargeDate = chargeDate;
     }
 
-    // 为OrmLite库重写toString()方法
+    // 为OrmLite数据库框架重写toString()方法
     @Override
     public String toString() {
         return "tb_record{" +
