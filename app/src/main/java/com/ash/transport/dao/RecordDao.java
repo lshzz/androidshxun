@@ -21,7 +21,7 @@ import java.util.List;
 public class RecordDao {
     private Context context;
 
-    // ORMLite提供的DAO类对象
+    // ORMLite提供的DAO类对象、
     // 第一个泛型是要操作的数据表映射成的实体类
     // 第二个泛型是这个实体类中ID的数据类型
     private Dao<RecordInfo, Integer> dao;
