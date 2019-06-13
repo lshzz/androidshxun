@@ -55,8 +55,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1c6c2481-0bac-49c2-aeb9-d1380bdcc8e3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/activity/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/activity/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/fragment/RoadFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/fragment/RoadFragment.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -80,16 +78,25 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/res/raw/car_info.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-198">
-              <caret line="12" column="12" lean-forward="true" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+              <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/drawables.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="152">
+              <caret line="8" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/drawables.xml">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/dao/RecordDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="120">
+              <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -156,7 +163,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/activity/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/fragment/CustomFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/fragment/AboutFragment.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/dao/RecordDao.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/factory/DialogFactory.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/factory/ToastFactory.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/model/CarInfo.java" />
@@ -172,6 +178,7 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/adapter/ViewPagerAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/adapter/TrafficsAdapter.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/ui/adapter/RecordsAdapter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/ash/transport/dao/RecordDao.java" />
       </list>
     </option>
   </component>
@@ -191,7 +198,62 @@
     <panes>
       <pane id="AndroidView" />
       <pane id="Scope" />
-      <pane id="ProjectPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="transport" type="b2602c69:ProjectViewProjectNode" />
+              <item name="transport" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="transport" type="b2602c69:ProjectViewProjectNode" />
+              <item name="transport" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="transport" type="b2602c69:ProjectViewProjectNode" />
+              <item name="transport" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="transport" type="b2602c69:ProjectViewProjectNode" />
+              <item name="transport" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="transport" type="b2602c69:ProjectViewProjectNode" />
+              <item name="transport" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="transport" type="b2602c69:ProjectViewProjectNode" />
+              <item name="transport" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="transport" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="transport" type="b2602c69:ProjectViewProjectNode" />
+              <item name="transport" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="transport" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -327,6 +389,21 @@
       <option name="presentableId" value="Default" />
       <updated>1558361498175</updated>
     </task>
+    <task id="LOCAL-00001" summary="第一次提交">
+      <created>1560414939315</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1560414939316</updated>
+    </task>
+    <task id="LOCAL-00002" summary="第一次提交">
+      <created>1560415070508</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1560415070508</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView">
@@ -340,10 +417,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" sideWeight="0.5006821" side_tool="true" weight="0.25663027" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.498366" visible="true" weight="0.24508321" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.498366" visible="true" weight="0.24508321" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" sideWeight="0.501634" side_tool="true" weight="0.24508321" />
       <window_info id="Build Variants" order="4" side_tool="true" />
@@ -351,12 +427,13 @@
       <window_info id="Designer" order="6" />
       <window_info id="Resources Explorer" order="7" />
       <window_info id="Capture Tool" order="8" />
+      <window_info active="true" anchor="bottom" id="Messages" sideWeight="0.49924356" visible="true" weight="0.3289689" />
       <window_info anchor="bottom" id="Run" order="0" weight="0.32843137" />
       <window_info anchor="bottom" id="Logcat" order="1" sideWeight="0.49687988" weight="0.32843137" />
       <window_info anchor="bottom" id="TODO" order="2" weight="0.32843137" />
       <window_info anchor="bottom" id="Debug" order="3" />
       <window_info anchor="bottom" id="Terminal" order="4" weight="0.32843137" />
-      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.5031201" side_tool="true" weight="0.32843137" />
+      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.50075644" side_tool="true" visible="true" weight="0.3289689" />
       <window_info anchor="bottom" id="Version Control" order="6" />
       <window_info anchor="bottom" id="Build" order="7" weight="0.2369281" />
       <window_info anchor="bottom" id="Android Profiler" order="8" show_stripe_button="false" weight="0.3287858" />
@@ -374,6 +451,8 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
+    <MESSAGE value="第一次提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="第一次提交" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/request/GetTrafficRequest.java">
@@ -474,13 +553,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="722">
           <caret line="51" column="44" selection-start-line="51" selection-start-column="44" selection-end-line="51" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/dao/RecordDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="33" column="32" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -736,7 +808,7 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/res/raw/car_info.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-198">
-          <caret line="12" column="12" lean-forward="true" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
+          <caret line="12" column="12" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -746,7 +818,14 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/drawables.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/ash/transport/dao/RecordDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="33" column="23" selection-start-line="33" selection-start-column="23" selection-end-line="33" selection-end-column="23" />
         </state>
       </provider>
     </entry>
